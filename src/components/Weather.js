@@ -20,8 +20,8 @@ export default class Wheather extends Component {
         <View style={styles.loading}>
           <ActivityIndicator
             animating={loading}
-            color={"red"}
-            size={"large"}
+            color={'red'}
+            size={'large'}
           />
         </View>
 
@@ -36,7 +36,7 @@ export default class Wheather extends Component {
               <View>
                 <Text style={styles.textCityStyle}>
                   {location}
-                  {"\n"}
+                  {'\n'}
                   <Text style={styles.weather}>
                     {weather.toUpperCase()}
                   </Text>
@@ -59,42 +59,42 @@ export default class Wheather extends Component {
 
 const styles = StyleSheet.create({
   loading: {
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     flex: 1
   },
 
   errorText: {
     padding: 80,
-    alignSelf: "center",
+    alignSelf: 'center',
     fontSize: 32,
-    fontWeight: "200"
+    fontWeight: '200'
   },
 
   textCityStyle: {
     paddingTop: 10,
-    textAlign: "left",
+    textAlign: 'left',
     fontSize: 32,
     paddingLeft: 10,
-    fontWeight: "300",
-    color: "white"
+    fontWeight: '300',
+    color: 'white'
   },
 
   textTemperature: {
     marginTop: 40,
-    textAlign: "center",
+    textAlign: 'center',
     fontSize: 64,
-    color: "white"
+    color: 'white'
   },
 
   textMinMax: {
     fontSize: 32,
-    textAlign: "center",
-    color: "white"
+    textAlign: 'center',
+    color: 'white'
   },
 
   weather: {
     fontSize: 18,
-    color: "white"
+    color: 'white'
   }
 });
