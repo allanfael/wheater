@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, KeyboardAvoidingView, StatusBar, ImageBackground, ToastAndroid } from 'react-native';
+import { StyleSheet,
+View, KeyboardAvoidingView, StatusBar, ImageBackground, ToastAndroid, Text } from 'react-native';
 
 import CardView from 'react-native-simple-card';
 import { fetchLocationId, fetchWeather } from './src/Api';
@@ -7,7 +8,7 @@ import InputLocation from './src/components/InputLocation';
 import Weather from './src/components/Weather';
 
 const imgBackGround = require('./src/img/background.jpg');
-const imgCard = require("./src/img/backgroundCard.jpg");
+const imgCard = require('./src/img/backgroundCard.jpg');
 
 export default class App extends Component {
 
@@ -70,14 +71,14 @@ export default class App extends Component {
         <View>
           <KeyboardAvoidingView
             style={styles.keyboardView}
-            behavior={"padding"}
+            behavior={'padding'}
           />
           <StatusBar barStyle="light-content" />
 
           <InputLocation onSubmit={this.updateLocation} />
 
           <View style={styles.cards}>
-            <CardView backgroundColor="#ffffff" >
+            <CardView backgroundColor="#ffffff">
               <ImageBackground
                 source={imgCard}
                 style={styles.imgBackGround}
@@ -94,6 +95,7 @@ export default class App extends Component {
               </ImageBackground>
             </CardView>
           </View>
+        <Text style={styles.text}>Cedido por MetaWeather.com</Text>
         </View>
       </ImageBackground>
     );
@@ -105,12 +107,22 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff'
   },
-  
+
   cards: {
     flex: 2
   },
 
   imgBackGround: {
     flex: 1
+  },
+
+  text: {
+    fontSize: 16,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontFamily: 'Open Sans',
+    color: 'white',
+    marginTop: 570
+    
   }
 });
