@@ -25,7 +25,6 @@ export default class App extends Component {
 
   componentDidMount() {
     this.updateLocation('New York');
-    console.log(this.updateLocation('New York').toString());
   }
 
   updateLocation = async city => {
